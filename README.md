@@ -28,3 +28,15 @@ The main API used in this app is Google Directions. We wrap the API with the [go
 CitiBike has real time biking and docking information in JSON format.  
 
 Before sending a request to Google Directions, we find the closest city bike station to our starting point with at least two available bikes. We also find the closest city bike station to our destination with at least two available docks. This is calculated with the [geodistance](https://github.com/kristianmandrup/geo-distance) gem, using longitude and latitude points acquired from the CitiBike JSON object.
+
+Travis CI:
+
+Trello:
+
+Contributors:
+1. Raghav
+2. Ken
+3. Dinesh
+4. Mario
+
+Retro:
