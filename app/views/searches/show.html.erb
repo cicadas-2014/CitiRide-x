@@ -1,0 +1,10 @@
+<div id="map">
+hello
+
+</div>
+<%= javascript_tag "renderMap()" %>
+
+<div class="authenticate">
+<%= link_to "Log in to save your ride?", login_path, id: "login", remote: true %>
+<%= link_to "...or sign up here.", signup_path, id: "signup", remote: true %>
+</div>

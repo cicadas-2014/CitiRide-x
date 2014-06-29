@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+
+body {
+  margin: 0;
+  background-color: #F8F8F8;
+  height: 40em;
+}
+
+ * {
+  font-family: 'Droid Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+ }
+
+ /*** HOME PAGE ***/
+
+ .index {
+  background-image: url('http://blog.bikecation.co.uk/Portals/122350/images/Central-Park-bikecation.jpeg'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 6%;
+  width: 100%;
+  height: 40em;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
+.container {
+  width: 50%;
+  margin: 2.5em auto 0 auto;
+}
+
+.home label {
+  margin-top: 1em;
+  display: block;
+  color: #F9F9F9;
+  text-shadow: 0 -3px 4px rgba(0,0,0,0.8);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.home input {
+  width: 96%;
+  margin-top: 0.6em;
+  display: block;
+  border-radius: 2px;
+  background-color: rgba(0,0,0,0.3);
+  border: 2px solid #F9F9F9;
+  padding: 0.5em;
+  color: #F9F9F9;
+  font-size: 1em;
+}
+
+.home input:focus {
+  background-color: #F9F9F9;
+  color: #1653AC;
+  outline: none;
+}
+
+.home input[type='submit'] {
+  margin: 5% auto 0 auto;
+  border: 2px solid #F9F9F9;
+  font-size: 1.1em;
+  line-height: 1em;
+  font-weight: bold;
+  color: #F9F9F9;
+  width: 45%;
+  text-shadow: 0 -3px 3px rgba(0,0,0,0.6);
+  display: block;
+}
+
+.home input[type='submit']:hover {
+  cursor: pointer;
+  background-color: #F9F9F9;
+  color: #1653AC;
+  text-shadow: none;
+}
+
+.home form {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+
+.home .logo {
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  margin: 0;
+  font-size: 9em;
+  color: #F9F9F9;
+  text-shadow: 0 -4px 5px rgba(0,0,0,0.6);
+}
+
+footer {
+  margin: 10em auto 0 auto;
+  width: 100%;
+  text-align: center;
+  color: #3F3F3F;
+}
+
+/*** ***/

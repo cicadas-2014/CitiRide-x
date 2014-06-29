@@ -1,0 +1,9 @@
+<%= form_tag(user_login_path, method: "get", remote: true, :id => "login") do %>
+  <%= label_tag(:username, 'Username') %>
+  <%= text_field_tag(:username) %>
+  <%= label_tag(:email, 'Email') %>
+  <%= email_field_tag(:email) %>
+  <%= label_tag(:password, 'Password') %>
+  <%= password_field_tag(:password) %>
+  <%= submit_tag('Log in') %>
+<% end %>
