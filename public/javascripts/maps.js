@@ -59,6 +59,7 @@ function initialize(coords) {
       if (status == google.maps.DirectionsStatus.OK) {
         directionsDisplay.setOptions({ preserveViewport: true });
         directionsDisplay.setDirections(response);
+        directionsDisplay.setOptions( {suppressMarkers: true})
       }
     });
   }
