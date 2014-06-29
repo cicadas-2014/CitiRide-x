@@ -1,6 +1,6 @@
 function initialize(coords) {
-  console.log(coords);
   var myLatlng = new google.maps.LatLng(coords[0][0],coords[0][1]);
+  console.log(myLatlng);
   var mapOptions = {
     zoom: 13,
     center: myLatlng
@@ -11,6 +11,7 @@ function initialize(coords) {
   displayRoutebike(coords[1],coords[2]);
   displayRoute2walk(coords[2],coords[3]);
 
+
 }
 
   function displayRoute1walk(start,start_station) {
@@ -19,7 +20,9 @@ function initialize(coords) {
 
     var myLatlng2 = new google.maps.LatLng(start_station[0],start_station[1]);
 
+
     var directionsDisplay = new google.maps.DirectionsRenderer();
+
 
     directionsDisplay.setMap(map);
 
@@ -35,6 +38,7 @@ function initialize(coords) {
       }
     });
   }
+
 
   function displayRoutebike(start_station, next_station) {
     var directionsService = new google.maps.DirectionsService();
@@ -61,6 +65,7 @@ function initialize(coords) {
 
 
 
+
   function displayRoute2walk(next_station, destination) {
     var directionsService = new google.maps.DirectionsService();
     var myLatlng = new google.maps.LatLng(next_station[0],next_station[1]);
@@ -68,6 +73,7 @@ function initialize(coords) {
     var myLatlng2 = new google.maps.LatLng(destination[0],destination[1]);
 
     var directionsDisplay = new google.maps.DirectionsRenderer();
+
 
     directionsDisplay.setMap(map);
 
@@ -84,6 +90,7 @@ function initialize(coords) {
       }
     });
   }
+
 
   function renderMap(coords) {
     google.maps.event.addDomListener(window, 'load', initialize(coords));
