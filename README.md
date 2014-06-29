@@ -31,7 +31,7 @@ Before sending a request to Google Directions, we find the closest city bike sta
 
 Travis CI:
 
-Trello:
+Trello: https://trello.com/b/uSddpuoV/citiride
 
 Contributors:
 1. Raghav
