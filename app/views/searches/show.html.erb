@@ -1,6 +1,12 @@
-<%= javascript_tag "renderMap()" %>
-
 <div id="map" style="height:500px;width:500px"></div>
+<script type="text/javascript">
+	// finalPoints[0] = start, finalPoints[1] = first station, finalPoints[2] = second station, finalPoints[3] = destination
+	var finalPoints = <%= @final_points %>;
+	renderMap(finalPoints);	
+</script>
+
+
+<div id="map"></div>
 
 <div class="authenticate">
 <%= link_to "Log in to save your ride?", login_path, id: "login", remote: true %>
