@@ -1,6 +1,6 @@
 function initialize(coords) {
-      console.log(coords[0][1])
   var myLatlng = new google.maps.LatLng(coords[0][0],coords[0][1]);
+  console.log(myLatlng);
   var mapOptions = {
     zoom: 10,
     center: myLatlng
@@ -10,17 +10,16 @@ function initialize(coords) {
   displayRoute1walk(coords[0],coords[1]);
   displayRoutebike(coords[1],coords[2]);
   displayRoute2walk(coords[2],coords[3]);
+
+  map.setCenter(myLatlng);
 }
 
 function displayRoute1walk(start,start_station) {
   var directionsService = new google.maps.DirectionsService();
   var myLatlng = new google.maps.LatLng(start[0],start[1]);
-
   var myLatlng2 = new google.maps.LatLng(start_station[0],start_station[1]);
 
   var directionsDisplay = new google.maps.DirectionsRenderer();
-
-  directionsDisplay.setMap(map);
 
   var request = {
     origin : myLatlng,
@@ -32,6 +31,11 @@ function displayRoute1walk(start,start_station) {
       directionsDisplay.setDirections(response);
     }
   });
+
+  // makeMarker( leg.start_location, icons.start, "start here" );
+
+  directionsDisplay.setMap(map);
+
 }
 
 function displayRoutebike(start_station, next_station) {
@@ -41,8 +45,6 @@ function displayRoutebike(start_station, next_station) {
   var myLatlng2 = new google.maps.LatLng(next_station[0],next_station[1]);
 
   var directionsDisplay = new google.maps.DirectionsRenderer();
-
-  directionsDisplay.setMap(map);
 
   var request = {
     origin : myLatlng,
@@ -54,6 +56,9 @@ function displayRoutebike(start_station, next_station) {
       directionsDisplay.setDirections(response);
     }
   });
+
+  directionsDisplay.setMap(map);
+  directionsDisplay.setOptions( { suppressMarkers: true } );
 }
 
 
@@ -66,8 +71,6 @@ function displayRoute2walk(next_station, destination) {
 
   var directionsDisplay = new google.maps.DirectionsRenderer();
 
-  directionsDisplay.setMap(map);
-
   var request = {
     origin : myLatlng,
     destination : myLatlng2,
@@ -79,6 +82,8 @@ function displayRoute2walk(next_station, destination) {
       directionsDisplay.setDirections(response);
     }
   });
+
+  directionsDisplay.setMap(map);
 }
 
 function renderMap(coords) {
