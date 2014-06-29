@@ -59,6 +59,7 @@ GEM
     faker (1.1.2)
       i18n (~> 0.5)
     ffi (1.9.3)
+    geo-distance (0.1.2)
     geocoder (1.2.2)
     gmaps4rails (2.1.2)
     google_directions (0.1.6.2)
@@ -176,6 +177,7 @@ DEPENDENCIES
   database_cleaner (~> 1.0.1)
   factory_girl_rails (~> 4.2.1)
   faker (~> 1.1.2)
+  geo-distance
   geocoder
   gmaps4rails
   google_directions
