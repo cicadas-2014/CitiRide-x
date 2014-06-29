@@ -20,11 +20,13 @@ module ApplicationHelper
   #   GoogleDirections.new(args[:start],args[:destination],options)
   # end
 
-  # def find_closest_bike(start_point)
-  #   p station_list = get_station_list
-  # end
-
   # args = {start_point: "7 carmine street, New York, NY", looking_for: "availableBikes" or "availableDocks"}
+
+  def find_coords(address)
+    location = Geocoder.search(address)
+    [location[0].latitude, location[0].longitude]
+  end
+
   def find_closest(args)
     station_list = get_station_list
     location = Geocoder.search(args[:start_point]) #can maybe also use the GoogleDirections gem here? All we're doing here is getting the latitude and longitude
