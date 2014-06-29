@@ -1,9 +1,11 @@
 function initialize(coords) {
-  var myLatlng = new google.maps.LatLng(coords[0]);
+      console.log(coords[0][1])
+  var myLatlng = new google.maps.LatLng(coords[0][0],coords[0][1]);
   var mapOptions = {
-    zoom: 0,
+    zoom: 10,
     center: myLatlng
   }
+
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
   displayRoute1walk(coords[0],coords[1]);
   displayRoutebike(coords[1],coords[2]);
