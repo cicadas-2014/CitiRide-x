@@ -31,6 +31,8 @@ Before sending a request to Google Directions, we find the closest city bike sta
 
 ### Other project details
 
+Heroku link: http://citiride.herokuapp.com/
+
 Travis CI:
 
 Trello: https://trello.com/b/uSddpuoV/citiride
