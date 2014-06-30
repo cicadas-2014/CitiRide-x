@@ -1,5 +1,5 @@
 function initialize(coords) {
-  var myLatlng = new google.maps.LatLng(coords[0][0],coords[0][1]);
+  var myLatlng = new google.maps.LatLng((coords[0][0]+coords[3][0])/2,(coords[0][1]+coords[3][1])/2);
   console.log(myLatlng);
   var mapOptions = {
     zoom: 13,
