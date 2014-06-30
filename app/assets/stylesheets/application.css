@@ -119,4 +119,39 @@ footer {
   color: #3F3F3F;
 }
 
-/*** ***/
+/*** SHOW PAGE ***/
+
+#map {
+  width: 100%;
+  height: 40em;
+  margin: 3em auto 0 auto;
+}
+
+div.authenticate {
+  text-align: center;
+  width: 100%;
+}
+
+#login {
+  margin: 1em;
+  position: relative;
+  top: 1em;
+  text-decoration: none;
+  color: #3F3F3F;
+}
+
+#signup {
+  margin: 1em;
+  position: relative;
+  top: 1em;
+  text-decoration: none;
+  color: #3F3F3F;
+}
+
+#login:hover {
+  color: #1653AC;
+}
+
+#signup:hover {
+  color: #1653AC;
+}
