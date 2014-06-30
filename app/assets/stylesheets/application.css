@@ -155,3 +155,10 @@ div.authenticate {
 #signup:hover {
   color: #1653AC;
 }
+
+.user_home {
+  position: relative;
+  top: 1em;
+  text-align: center;
+  width: 100%;
+}
