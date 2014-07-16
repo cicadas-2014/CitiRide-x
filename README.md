@@ -33,8 +33,6 @@ Before sending a request to Google Directions, we find the closest city bike sta
 
 Heroku link: http://citiride.herokuapp.com/
 
-Travis CI:
-
 Trello: https://trello.com/b/uSddpuoV/citiride
 
 Contributors:
@@ -42,5 +40,3 @@ Contributors:
 2. Ken
 3. Dinesh
 4. Mario
-
-Retro:
