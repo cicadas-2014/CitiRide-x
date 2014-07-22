@@ -2,7 +2,7 @@ function initialize(coords) {
   var myLatlng = new google.maps.LatLng((coords[0][0]+coords[3][0])/2,(coords[0][1]+coords[3][1])/2);
   console.log(myLatlng);
   var mapOptions = {
-    zoom: 13,
+    zoom: 14,
     center: myLatlng
   }
 
@@ -10,8 +10,6 @@ function initialize(coords) {
   displayRoute1walk(coords[0],coords[1]);
   displayRoutebike(coords[1],coords[2]);
   displayRoute2walk(coords[2],coords[3]);
-
-
 }
 
   function displayRoute1walk(start,start_station) {
