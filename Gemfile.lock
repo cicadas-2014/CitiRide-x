@@ -59,8 +59,12 @@ GEM
     faker (1.1.2)
       i18n (~> 0.5)
     ffi (1.9.3)
+    geo-distance (0.1.2)
     geocoder (1.2.2)
     gmaps4rails (2.1.2)
+    gon (5.0.4)
+      actionpack (>= 2.3.0)
+      json
     google_directions (0.1.6.2)
       nokogiri (>= 1.4.1)
     hike (1.2.3)
@@ -176,11 +180,14 @@ DEPENDENCIES
   database_cleaner (~> 1.0.1)
   factory_girl_rails (~> 4.2.1)
   faker (~> 1.1.2)
+  geo-distance
   geocoder
   gmaps4rails
+  gon
   google_directions
   jbuilder (~> 2.0)
   jquery-rails
+  json
   launchy (~> 2.3.0)
   pg
   pry
