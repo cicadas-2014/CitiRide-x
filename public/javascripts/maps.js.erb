@@ -122,26 +122,27 @@ function showStepsRouteBike(directionResult, startStation, destinationStation) {
                 station_infowindow.open(map, marker);
 
                 // Create an event listener that runs when the infowindow is fully popped-up. This is so we can reset the margins
-                google.maps.event.addListener(station_infowindow, 'domready', function() {
-                  // Resets the h2 padding back to zero
-                  $('.temp-padding').css('padding-right', '0');
+                // google.maps.event.addListener(station_infowindow, 'domready', function() {
+                //   // Resets the h2 padding back to zero
+                //   $('.temp-padding').css('padding-right', '0');
 
-                  // Get the height of the table, to base the margin of the image and the table off of one another
-                  var table_height = $('#station-table').height()/2;
+                //   // Get the height of the table, to base the margin of the image and the table off of one another
+                //   var table_height = $('#station-table').height()/2;
 
-                  // Set the top margin of the table to a relative value of the image size, if the table is smaller than the image
-                  var table_margin = ($('.sponsor-img').attr("height") - table_height) / 2;
-                  table_margin = Math.max(table_margin, 0);
-                  $('.station-data-w-table').css('margin-top', table_margin);
+                //   // Set the top margin of the table to a relative value of the image size, if the table is smaller than the image
+                //   var table_margin = ($('.sponsor-img').attr("height") - table_height) / 2;
+                //   table_margin = Math.max(table_margin, 0);
+                //   $('.station-data-w-table').css('margin-top', table_margin);
 
-                  // // Set the top margin of the image to a relative value of the table size, if the image is smaller than the table
-                  // var img_margin = (table_height - $('.sponsor-img').attr("height")) / 2;
-                  // img_margin = Math.max(img_margin, 0);
-                  // $('.sponsor-img').css('margin-top', img_margin);
-                });
+                //   // // Set the top margin of the image to a relative value of the table size, if the image is smaller than the table
+                //   // var img_margin = (table_height - $('.sponsor-img').attr("height")) / 2;
+                //   // img_margin = Math.max(img_margin, 0);
+                //   // $('.sponsor-img').css('margin-top', img_margin);
+                // });
                 // End of infowindow domready event listener
               });
 }
+
 }
 //Icon as end position
 
@@ -166,9 +167,9 @@ google.maps.event.addListener(marker2, 'click', function() {
                             //if the station is planned, put up a small message saying it is planned, if not, put the table up
                             (destinationStation.statusValue == 'Planned' ? "<i>(planned station)</i>" :
                                 //if we have don't have sponsorship info:....
-                                    '<div class="station-data">' +
-                                '<b>Available Bikes: </b>' + startStation.availableBikes + '<br>' +
-                                '<b>Available Docks: </b>' + startStation.availableDocks + '<br>' +
+                                '<div class="station-data">' +
+                                '<b>Available Bikes: </b>' + destinationStation.availableBikes + '<br>' +
+                                '<b>Available Docks: </b>' + destinationStation.availableDocks + '<br>' +
                                 // '<table id="station-table">' + 
                                 // '<tr><th>Available Bikes:</th><td>' + startStation.availableBikes + '</td></tr>' +
                                 // '<tr><th>Available Docks:</th><td>' + startStation.availableDocks + '</td></tr>' +
@@ -188,26 +189,8 @@ google.maps.event.addListener(marker2, 'click', function() {
                 station_infowindow.open(map, marker2);
 
                 // Create an event listener that runs when the infowindow is fully popped-up. This is so we can reset the margins
-                google.maps.event.addListener(station_infowindow, 'domready', function() {
-                  // Resets the h2 padding back to zero
-                  $('.temp-padding').css('padding-right', '0');
-
-                  // Get the height of the table, to base the margin of the image and the table off of one another
-                  var table_height = $('#station-table').height();
-
-                  // Set the top margin of the table to a relative value of the image size, if the table is smaller than the image
-                  var table_margin = ($('.sponsor-img').attr("height") - table_height) / 2;
-                  table_margin = Math.max(table_margin, 0);
-                  $('.station-data-w-table').css('margin-top', table_margin);
-
-                  // // Set the top margin of the image to a relative value of the table size, if the image is smaller than the table
-                  // var img_margin = (table_height - $('.sponsor-img').attr("height")) / 2;
-                  // img_margin = Math.max(img_margin, 0);
-                  // $('.sponsor-img').css('margin-top', img_margin);
-                });
                 // End of infowindow domready event listener
               });
-
 }
 
 function showStepsRoute1Walk(directionResult, startAddress) {
@@ -252,24 +235,7 @@ function showStepsRoute1Walk(directionResult, startAddress) {
                 // Open the InfoWindow
                 station_infowindow.open(map, marker);
 
-                // Create an event listener that runs when the infowindow is fully popped-up. This is so we can reset the margins
-                google.maps.event.addListener(station_infowindow, 'domready', function() {
-                  // Resets the h2 padding back to zero
-                  $('.temp-padding').css('padding-right', '0');
 
-                  // Get the height of the table, to base the margin of the image and the table off of one another
-                  var table_height = $('#station-table').height();
-
-                  // Set the top margin of the table to a relative value of the image size, if the table is smaller than the image
-                  var table_margin = ($('.sponsor-img').attr("height") - table_height) / 2;
-                  table_margin = Math.max(table_margin, 0);
-                  $('.station-data-w-table').css('margin-top', table_margin);
-
-                  // // Set the top margin of the image to a relative value of the table size, if the image is smaller than the table
-                  // var img_margin = (table_height - $('.sponsor-img').attr("height")) / 2;
-                  // img_margin = Math.max(img_margin, 0);
-                  // $('.sponsor-img').css('margin-top', img_margin);
-                });
                 // End of infowindow domready event listener
               });
 }
@@ -317,29 +283,9 @@ function showStepsRoute2Walk(directionResult, destination) {
                 // Open the InfoWindow
                 station_infowindow.open(map, marker);
 
-                // Create an event listener that runs when the infowindow is fully popped-up. This is so we can reset the margins
-                google.maps.event.addListener(station_infowindow, 'domready', function() {
-                  // Resets the h2 padding back to zero
-                  $('.temp-padding').css('padding-right', '0');
-
-                  // Get the height of the table, to base the margin of the image and the table off of one another
-                  var table_height = $('#station-table').height();
-
-                  // Set the top margin of the table to a relative value of the image size, if the table is smaller than the image
-                  var table_margin = ($('.sponsor-img').attr("height") - table_height) / 2;
-                  table_margin = Math.max(table_margin, 0);
-                  $('.station-data-w-table').css('margin-top', table_margin);
-
-                  // // Set the top margin of the image to a relative value of the table size, if the image is smaller than the table
-                  // var img_margin = (table_height - $('.sponsor-img').attr("height")) / 2;
-                  // img_margin = Math.max(img_margin, 0);
-                  // $('.sponsor-img').css('margin-top', img_margin);
-                });
                 // End of infowindow domready event listener
               });
 }
-
-
 
   // attachInstructionText(marker, myRoute.steps[i].instructions);
   // markerArray.push(marker);

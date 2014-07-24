@@ -162,3 +162,9 @@ div.authenticate {
   text-align: center;
   width: 100%;
 }
+
+div.map-popup {
+  height: auto;
+  overflow: scroll;
+  max-height: 100px;
+}
