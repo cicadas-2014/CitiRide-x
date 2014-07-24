@@ -2,7 +2,10 @@
 <script type="text/javascript">
 	// finalPoints[0] = start, finalPoints[1] = first station, finalPoints[2] = second station, finalPoints[3] = destination
 	var finalPoints = <%= @final_points %>;
-	renderMap(finalPoints);	
+	var addresses = <%= @address.to_json.html_safe %>
+	var startStation = <%= @start_station_data.to_json.html_safe %>
+	var destinationStation = <%= @destination_station_data.to_json.html_safe %>
+	renderMap(finalPoints, addresses, startStation, destinationStation);	
 </script>
 
 
