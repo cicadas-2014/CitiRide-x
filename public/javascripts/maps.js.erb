@@ -31,6 +31,8 @@ function displayRoute1walk(start,start_station) {
     if (status == google.maps.DirectionsStatus.OK) {
       directionsDisplay.setOptions({ preserveViewport: true });
       directionsDisplay.setDirections(response);
+      directionsDisplay.setOptions( {suppressMarkers: true})
+      showStepsRoute1Walk(response);
     }
   });
 }
@@ -79,11 +81,11 @@ function showSteps(directionResult) {
     if (i == 0) {
     //Icon as start position
     // icon = "https://chart.googleapis.com/chart?chst=d_map_xpin_icon&chld=pin_star|car-dealer|00FFFF|FF0000";
-  var marker = new google.maps.Marker({
-    position: myRoute.steps[i].start_point, 
-    map: map,
-    icon: icon
-  });
+    var marker = new google.maps.Marker({
+      position: myRoute.steps[i].start_point, 
+      map: map,
+      icon: icon
+    });
   }
   // attachInstructionText(marker, myRoute.steps[i].instructions);
   // markerArray.push(marker);
@@ -94,6 +96,60 @@ var marker = new google.maps.Marker({
   map: map,
   icon: icon
 });
+
+}
+
+function showStepsRoute1Walk(directionResult) {
+  var myRoute = directionResult.routes[0].legs[0];
+
+  for (var i = 0; i < myRoute.steps.length; i++) {
+    // var assetPath = "<%= asset_path 'stations/map-icons.png' %>";
+    
+    var icon = 'https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=A|FFFFFF|000000';
+
+    if (i == 0) {
+    //Icon as start position
+    // icon = "https://chart.googleapis.com/chart?chst=d_map_xpin_icon&chld=pin_star|car-dealer|00FFFF|FF0000";
+    var marker = new google.maps.Marker({
+      position: myRoute.steps[i].start_point, 
+      map: map,
+      icon: icon
+    });
+  }
+  // attachInstructionText(marker, myRoute.steps[i].instructions);
+  // markerArray.push(marker);
+}
+
+var marker = new google.maps.Marker({
+  position: myRoute.steps[i - 1].end_point, 
+  map: map,
+  icon: icon
+});
+
+}
+
+function showStepsRoute2Walk(directionResult) {
+  var myRoute = directionResult.routes[0].legs[0];
+
+  for (var i = 0; i < myRoute.steps.length; i++) {
+    // var assetPath = "<%= asset_path 'stations/map-icons.png' %>";
+    var icon = 'https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=B|FFFFFF|000000';
+//     chst=d_map_pin_letter[_withshadow]
+// chld=<character>|<fill_color>|<text_color>
+      
+    if (i == myRoute.steps.length-1) {
+    //Icon as start position
+    // icon = "https://chart.googleapis.com/chart?chst=d_map_xpin_icon&chld=pin_star|car-dealer|00FFFF|FF0000";
+    var marker = new google.maps.Marker({
+      position: myRoute.steps[i].start_point, 
+      map: map,
+      icon: icon
+    });
+  }
+
+  // attachInstructionText(marker, myRoute.steps[i].instructions);
+  // markerArray.push(marker);
+}
 
 }
 
@@ -119,6 +175,8 @@ function displayRoute2walk(next_station, destination) {
     if (status == google.maps.DirectionsStatus.OK) {
       directionsDisplay.setOptions({ preserveViewport: true });
       directionsDisplay.setDirections(response);
+      directionsDisplay.setOptions( {suppressMarkers: true})
+      showStepsRoute2Walk(response);
     }
   });
 }

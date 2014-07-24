@@ -26,6 +26,7 @@
 tmp
 tmp/cache/*
 tmp/**/*
+coverage/**/*
 *.log
 *.sql
 *.sqlite
